@@ -16,15 +16,18 @@
 </head>
 <body>
   <h1>WhatsApp 翻译助手 隐私政策</h1>
-  <p class="date">更新日期：2026-07-23</p>
+  <p class="date">更新日期：2026-07-25</p>
   <p>本扩展尊重并保护用户隐私：</p>
   <ol>
-    <li>本扩展<strong>不收集、存储或传输</strong>任何用户数据到开发者自有服务器用于统计或广告，不含任何统计与广告 SDK。</li>
+    <li>本扩展<strong>不收集、存储或传输</strong>任何用户数据到开发者自有服务器用于统计或广告，不含任何统计与广告 SDK，不做行为追踪。</li>
     <li>用户的设置（包括 DeepSeek API Key）、术语表、会话语言偏好与译文缓存，仅保存在用户本地浏览器（chrome.storage）中。</li>
-    <li>本扩展使用 Egretiva 统一账号服务（account.egretiva.com）完成登录与权益校验：登录在 Chrome 官方授权窗口中完成，扩展不接触账号密码；登录所需的邮箱地址仅用于账号验证与产品权益签发。</li>
-    <li>为实现翻译功能，用户查看或输入的聊天文本会发送至 DeepSeek（api.deepseek.com）进行翻译处理，传输内容由 DeepSeek 的隐私政策约束；除上述目的外，聊天内容不会发送给任何其他方。</li>
-    <li>云备份功能中，由用户主动上传的备份数据在设备端完成加密后，以密文形式经 data-cn.egretiva.com 网关传输至位于腾讯云的对象存储；服务端不持有明文数据与解密密钥。备份数据保留 30 天（Translator 为 90 天），删除后进入 14 天软删除恢复窗口；存储配额为 Desktop 2GB、Follow-up 20MB、Translator 50MB。</li>
-    <li>翻译代理：Egretiva 新用户试用模式下，用户选择翻译的文本会经 Egretiva 翻译代理转发至 DeepSeek API；BYOK（自带 API Key）模式下，文本<strong>不经过</strong> Egretiva 服务器，直接发送至 DeepSeek。试用代理不记录翻译正文，仅记录字符用量；试用限额为 14 天、每日 2 万字符、累计 10 万字符。</li>
+    <li>基本翻译（自带 DeepSeek API Key）无需登录 Egretiva。用户主动使用 Egretiva 账号入口时，本扩展通过 Egretiva 统一账号服务（account.egretiva.com）完成登录与权益校验：登录在 Chrome 官方授权窗口中完成，扩展不接触账号密码；邮箱地址仅用于账号验证与产品权益签发。</li>
+    <li>为实现翻译功能，用户查看或输入的聊天文本、以及用户主动选中的网页文本（划词翻译，默认关闭、需手动开启）会发送至用户所选的翻译来源进行处理：
+      <ul>
+        <li>使用自带 DeepSeek API Key 时：文本直接发送至 DeepSeek（api.deepseek.com），传输内容由 DeepSeek 的隐私政策约束；</li>
+        <li>使用 Egretiva 托管 API 时：文本经 Egretiva 数据面（data-cn.egretiva.com）转发完成翻译并返回译文，Egretiva 不将原文与译文用于翻译之外的目的。</li>
+      </ul>
+      除上述目的外，聊天内容与选中文本不会发送给任何其他方。</li>
     <li>用户可随时在扩展设置页退出登录、删除 API Key，或在浏览器中卸载扩展以移除全部本地数据。</li>
   </ol>
   <p>联系方式：<a href="mailto:support@egretiva.com">support@egretiva.com</a></p>
